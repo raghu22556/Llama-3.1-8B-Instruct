@@ -49,7 +49,7 @@ curl --location '<your_inference_url>' \
         {
           "name": "prompt",
           "shape": [1],
-          "data": ["What is deep meaning?"],
+          "data": ["What is deep learning?"],
           "datatype": "BYTES"
         },
         {

@@ -1,13 +1,9 @@
 from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
-import os
 
 class InferlessPythonModel:
     def initialize(self):
-        HF_TOKEN = os.getenv("HF_TOKEN")
-        os.environ['HF_TOKEN'] = HF_TOKEN
         model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-
         self.llm = LLM(model=model_id,dtype="float16")
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
 
